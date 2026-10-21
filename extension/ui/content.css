@@ -1,0 +1,9 @@
+/* 별: 누르기 쉬운 크기(약 30×28px). 학교 페이지 배율은 건드리지 않는다 */
+.cp-star { all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; max-width: 100%; height: 28px; margin: 1px 4px 1px 0; vertical-align: middle;
+  font-size: 21px; line-height: 1; color: #1f5fbf; border-radius: 6px; }
+.cp-star:hover { background: rgba(31, 95, 191, .14); }
+.cp-star[aria-pressed="true"] { color: #b47b00; }
+.cp-star:focus-visible { outline: 2px solid #1f5fbf; outline-offset: -2px; }
+.cp-toast { position: fixed; right: 16px; bottom: 16px; max-width: 440px; z-index: 2147483647; padding: 8px 14px; border-radius: 8px; background: #1d1d1b; color: #fff;
+  font: 14px system-ui, sans-serif; }

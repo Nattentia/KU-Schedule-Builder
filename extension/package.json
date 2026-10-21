@@ -1,0 +1,13 @@
+{
+  "name": "ku-schedule-builder",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node test/candidates.test.mjs && node test/state.test.mjs && node test/judge.test.mjs && node test/background.test.mjs && node test/package.test.mjs && node test/season.test.mjs && node test/sections.test.mjs && node test/layout.test.mjs",
+    "pack": "node scripts/pack.mjs"
+  },
+  "devDependencies": {
+    "pdfjs-dist": "^4.10.38"
+  }
+}

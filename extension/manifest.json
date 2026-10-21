@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "시간표 플래너 (비공식)",
+  "version": "0.2.1",
+  "description": "비공식 개인용 시간표·시험 일정 플래너. 학교 과목조회·강의계획서를 읽기만 하고, 수강신청은 하지 않습니다. 모든 데이터는 이 PC에만 저장됩니다.",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "sidePanel", "scripting"],
+  "host_permissions": [
+    "https://sugang.korea.ac.kr/*",
+    "https://ams.korea.ac.kr/*",
+    "https://registrar.korea.ac.kr/*"
+  ],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "side_panel": { "default_path": "ui/panel.html" },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": { "default_title": "시간표 플래너", "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" } },
+  "content_scripts": [
+    { "matches": ["https://sugang.korea.ac.kr/*"], "js": ["ui/content.js"], "css": ["ui/content.css"] }
+  ]
+}
